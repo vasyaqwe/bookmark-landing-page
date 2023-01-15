@@ -20,7 +20,7 @@
   }
 }
 
-@media(min-width:55em) {
+@media(min-width:50em) {
   :root {
     --fs-900: 2.7rem;
     --fs-800: 1.9rem;
@@ -115,7 +115,7 @@ input {
 }
 
 .text-primary-900 {
-  color: hsl(var(--clr-primary-400));
+  color: hsl(var(--clr-primary-900));
 }
 
 .text-neutral-400 {
@@ -174,9 +174,10 @@ input {
   letter-spacing: .05rem;
 }
 
-@media(max-width: 55em) {
+@media(max-width: 50em) {
   .mobile-text-center {
     text-align: center;
+    margin-inline: auto;
   }
 }
 

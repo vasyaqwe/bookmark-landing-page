@@ -10,12 +10,12 @@ function Features() {
             <h2 className="fs-800 fw-500 text-center text-primary-900">Features</h2>
             <p className="fs-400 text-neutral-400"></p>
             <div className="tabs">
-                <nav>
-                    <ul>
+                <nav className="features-nav">
+                    <ul className="tab-list">
                         {features.map((item, i) => (
-                            <li key={i} className='feature-tab text-primary-900 mobile-text-center'
+                            <li key={i} className={`feature-tab text-center ${item === selectedTab ? 'selected' : ''}`}
                                 onClick={() => setSelectedTab(item)}>
-                                <span className="feature-tab-text">{item.tabTitle}
+                                <span className="feature-tab-text text-center">{item.tabTitle}
                                     {item === selectedTab ? (
                                         <motion.div className="underline bg-accent-danger" layoutId="underline" />
                                     ) : null}
@@ -32,10 +32,11 @@ function Features() {
                         exit={{ y: -10, opacity: 0 }}
                         transition={{ duration: 0.2 }}
                     >
-                        <img src={selectedTab.img} alt="bookmark extension illustration" />
-                        <div>
-                            <h2 className="fs-800 fw-500 text-center text-primary-900">{selectedTab.featureTitle}</h2>
+                        <img src={selectedTab.img} className="mobile-text-center" alt="bookmark extension illustration" />
+                        <div className="flow tab-text">
+                            <h2 className="fs-800 fw-500 mobile-text-center text-primary-900">{selectedTab.featureTitle}</h2>
                             <p className="fs-400 text-neutral-400 mobile-text-center">{selectedTab.description}</p>
+                            <a href="#" className="btn btn-primary">More Info</a>
                         </div>
                     </motion.div>
                 </AnimatePresence>

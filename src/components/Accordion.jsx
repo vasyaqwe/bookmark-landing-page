@@ -1,14 +1,16 @@
+import { useState } from "react"
 
-function Card({ name, minVersion, logo }) {
+function Accordion({ question, answer }) {
+    const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className="card">
-            {logo}
-            <h3 className="fs-700 fw-500 text-primary-900">Add to {name}</h3>
-            <p>Minimum version: {minVersion}</p>
-            <a href="#">Add & Install Extension</a>
+        <div className="accordion">
+            <h4 className="fw-400 accordion-question">
+                {question}
+            </h4>
+            <p>{answer}</p>
         </div>
     )
 }
 
-export default Card
+export default Accordion

@@ -19,6 +19,24 @@ export const browsers = [
         logo: <OperaLogo />
     }
 ]
+export const accordions = [
+    {
+        question: 'What is Bookmark?',
+        answer: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolor facilis ipsa! Quae commodi minima architecto eveniet totam autem beatae error. Excepturi quaerat praesentium unde saepe ipsum, aperiam quibusdam laboriosam.'
+    },
+    {
+        question: 'How can I request a new browser?',
+        answer: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolor facilis ipsa! Quae commodi minima architecto eveniet totam autem beatae error. Excepturi quaerat praesentium unde saepe ipsum, aperiam quibusdam laboriosam.'
+    },
+    {
+        question: 'Is there a mobile app?',
+        answer: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolor facilis ipsa! Quae commodi minima architecto eveniet totam autem beatae error. Excepturi quaerat praesentium unde saepe ipsum, aperiam quibusdam laboriosam.'
+    },
+    {
+        question: 'What about other Chromium browsers?',
+        answer: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolor facilis ipsa! Quae commodi minima architecto eveniet totam autem beatae error. Excepturi quaerat praesentium unde saepe ipsum, aperiam quibusdam laboriosam.'
+    },
+]
 export const features = [
     {
         tabTitle: 'Simple Bookmarking',
