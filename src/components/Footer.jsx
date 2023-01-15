@@ -1,4 +1,4 @@
-import Logo from "./Logo"
+import { ReactComponent as Logo } from '../assets/logo-bookmark.svg'
 import { ReactComponent as TwitterLogo } from '../assets/icon-twitter.svg'
 import { ReactComponent as FacebookLogo } from '../assets/icon-facebook.svg'
 

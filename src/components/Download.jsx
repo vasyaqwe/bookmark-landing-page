@@ -1,28 +1,10 @@
-import { ReactComponent as ChromeLogo } from '../assets/logo-chrome.svg'
-import { ReactComponent as FirefoxLogo } from '../assets/logo-firefox.svg'
-import { ReactComponent as OperaLogo } from '../assets/logo-opera.svg'
+import { browsers } from '../data'
 import Card from './Card'
 
 function Download() {
-    const browsers = [
-        {
-            name: 'Chrome',
-            minVersion: 62,
-            logo: <ChromeLogo />
-        },
-        {
-            name: 'Firefox',
-            minVersion: 55,
-            logo: <FirefoxLogo />
-        },
-        {
-            name: 'Opera',
-            minVersion: 46,
-            logo: <OperaLogo />
-        }
-    ]
+
     const cards = browsers.map(browser => (
-        <Card data={...browser} />
+        <Card data={{ ...browser }} />
     ))
     return (
         <section className="section download container">

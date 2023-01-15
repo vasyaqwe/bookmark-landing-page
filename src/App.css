@@ -1,41 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.primary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.secondary-header-wrapper.container {
+  position: relative;
+  width: min(95%, calc(70em + 3rem));
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.secondary-header {
+  position: absolute;
+  top: 2.5rem;
+  width: 100%;
+}
+
+.nav-toggle {
+  border: 0;
+  background-color: transparent;
+  background-image: url('./assets/menu.svg');
+  background-position: center;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+@media(max-width: 35em) {
+  .primary-nav {
+    padding: 2em;
+    border-radius: .35rem;
+    position: fixed;
+    inset: 6rem 2rem auto 2rem;
+    z-index: 100;
+    background-color: #fff;
+    transform-origin: top;
+    box-shadow: 1px 1px 10px #a6a6a6;
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    color: #fff;
+    font-size: 1.5rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+
+@media(min-width: 35em) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-left: clamp(1rem, 4vw, 3rem);
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: clamp(1rem, 4vw, 3rem);
   }
 }
 
-.card {
-  padding: 2em;
+.feature-container {
+  margin-top: 3rem;
+  gap: 3rem;
 }
 
-.read-the-docs {
-  color: #888;
+.feature-tab {
+  cursor: pointer;
+  padding-block: 1em;
+  border-bottom: 1px solid hsl(var(--clr-neutral-400) / .4);
+}
+
+.feature-tab-text {
+  position: relative;
+}
+
+.feature-tab-text .underline {
+  position: absolute;
+  bottom: -1.2em;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-radius: .1rem;
 }
