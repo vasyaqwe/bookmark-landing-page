@@ -8,7 +8,11 @@ function Features() {
     return (
         <section className="section features container flow">
             <h2 className="fs-800 fw-500 text-center text-primary-900">Features</h2>
-            <p className="fs-400 text-neutral-400"></p>
+            <p className="fs-400 text-neutral-400 max-width text-center">
+                Our aim is to make it quick and easy for you to access your
+                favourite websites. Your bookmarks sync between your devices
+                so you can access them on the go.
+            </p>
             <div className="tabs">
                 <nav className="features-nav">
                     <ul className="tab-list">
@@ -27,12 +31,12 @@ function Features() {
                 <AnimatePresence exitBeforeEnter>
                     <motion.div className="even-cols feature-container"
                         key={selectedTab.tabTitle}
-                        initial={{ y: 10, opacity: 0 }}
+                        initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -10, opacity: 0 }}
+                        exit={{ y: -20, opacity: 0 }}
                         transition={{ duration: 0.2 }}
                     >
-                        <img src={selectedTab.img} className="mobile-text-center" alt="bookmark extension illustration" />
+                        <img className="feature-tab-img mobile-text-center" src={selectedTab.img} alt="bookmark extension illustration" />
                         <div className="flow tab-text">
                             <h2 className="fs-800 fw-500 mobile-text-center text-primary-900">{selectedTab.featureTitle}</h2>
                             <p className="fs-400 text-neutral-400 mobile-text-center">{selectedTab.description}</p>

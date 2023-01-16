@@ -8,7 +8,9 @@
   --fs-900: 1.8rem;
   --fs-800: 1.5rem;
   --fs-700: 1.1rem;
+  --fs-500: 1rem;
   --fs-400: .98rem;
+  --fs-300: .85rem;
 }
 
 @media(min-width: 35em) {
@@ -16,7 +18,9 @@
     --fs-900: 2.2rem;
     --fs-800: 1.7rem;
     --fs-700: 1.2rem;
+    --fs-500: 1.1rem;
     --fs-400: 1.005rem;
+    --fs-300: .88rem;
   }
 }
 
@@ -25,7 +29,9 @@
     --fs-900: 2.7rem;
     --fs-800: 1.9rem;
     --fs-700: 1.3rem;
+    --fs-500: 1.2rem;
     --fs-400: 1.01rem;
+    --fs-300: .9rem;
   }
 }
 
@@ -80,10 +86,6 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
-}
-
-input {
-  width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -150,8 +152,16 @@ input {
   font-size: var(--fs-700);
 }
 
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
 .fs-400 {
   font-size: var(--fs-400);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
 }
 
 .fw-500 {
@@ -174,11 +184,20 @@ input {
   letter-spacing: .05rem;
 }
 
+.letter-spacing-large {
+  letter-spacing: .2rem;
+}
+
 @media(max-width: 50em) {
   .mobile-text-center {
     text-align: center;
     margin-inline: auto;
   }
+}
+
+.max-width {
+  max-width: 500px;
+  margin-inline: auto;
 }
 
 .flex {
@@ -200,7 +219,7 @@ input {
 }
 
 .container {
-  width: min(90%, 80em);
+  width: min(90%, 70em);
   margin-inline: auto;
 }
 
@@ -217,14 +236,28 @@ input {
 }
 
 .even-cols {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 @media(min-width: 50em) {
   .even-cols {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     align-items: center;
   }
+
+  .even-cols>img,
+  .even-cols>div {
+    width: 50%;
+  }
+}
+
+.section+.section {
+  margin-top: 6rem;
+}
+
+.title {
+  line-height: 1.2em;
 }
 
 .btn {
@@ -235,17 +268,30 @@ input {
 }
 
 .btn-danger {
+  box-shadow: 1px 3px 4px hsl(var(--clr-neutral-400) / .6);
   background-color: hsl(var(--clr-accent-danger));
   padding: .7em 1.75em;
   color: #fff;
 }
 
 .btn-primary {
+  box-shadow: 1px 3px 4px hsl(var(--clr-accent-primary) / .5);
   background-color: hsl(var(--clr-accent-primary));
   color: #fff;
 }
 
 .btn-neutral {
+  box-shadow: 1px 3px 4px hsl(var(--clr-neutral-400) / .6);
   background-color: hsl(var(--clr-neutral-100));
   color: hsl(var(--clr-primary-900));
+}
+
+input[type=email] {
+  border-radius: .25rem;
+  border: 0;
+  padding-left: 1em;
+}
+
+input[type=email]::placeholder {
+  color: hsl(var(--clr-neutral-400));
 }
