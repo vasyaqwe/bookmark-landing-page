@@ -38,13 +38,15 @@
     position: fixed;
     inset: 0;
     opacity: 0;
+    pointer-events: none;
     background-color: hsl(var(--clr-primary-900) / .95);
-    transform-origin: top;
-    box-shadow: 1px 1px 10px #a6a6a6;
+    transition: .25s ease-in-out;
   }
 
   .primary-nav[data-visible=true] {
     opacity: 1;
+    pointer-events: all;
+    backdrop-filter: blur(.25rem);
   }
 
   .nav-list {
@@ -243,7 +245,7 @@
 
 .card {
   padding: 1.4em;
-  max-width: 250px;
+  max-width: 255px;
   box-shadow: 1px 1px 10px rgb(0 0 0 / .1);
   border-radius: .35rem;
   background-image: url('./assets/bg-dots.svg');
@@ -320,12 +322,13 @@
 }
 
 .contact .container {
-  max-width: 450px;
+  max-width: 460px;
   margin-inline: auto;
 }
 
-.contact input {
-  width: 60%;
+.contact .input-wrapper {
+  position: relative;
+  flex: 1;
 }
 
 .footer {
@@ -374,10 +377,12 @@
   }
 }
 
-
-
 .footer .socials-list {
   justify-content: center;
   align-content: center;
   gap: 2rem;
+}
+
+.socials-link:hover path {
+  fill: hsl(var(--clr-accent-danger));
 }

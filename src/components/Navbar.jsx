@@ -20,7 +20,7 @@ function Navbar({ open }) {
                     </a>
                 </li>
                 <li className="nav-item">
-                    <button className="btn btn-danger btn-login letter-spacing uppercase">Login</button>
+                    <a href="#" className="btn btn-danger text-center btn-login letter-spacing uppercase">Login</a>
                 </li>
             </ul>
         </nav>
