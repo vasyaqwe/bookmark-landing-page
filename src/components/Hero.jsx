@@ -11,12 +11,14 @@ function Hero() {
                     websites. Open a new browser tab and see your sites load
                     instantly. Try it for free.
                 </p>
-                <div className="flex">
+                <div className="flex mobile-center">
                     <a className='btn btn-primary' href="#">Get it on Chrome</a>
                     <a className='btn btn-neutral' href="#">Get it on Firefox</a>
                 </div>
             </div>
-            <img src={heroImg} alt="illustration of Bookmark on a desktop" />
+            <div className='img-bg img-bg-right'>
+                <img src={heroImg} alt="illustration of Bookmark on a desktop" />
+            </div>
         </section>
     )
 }

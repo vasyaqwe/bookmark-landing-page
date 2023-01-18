@@ -116,6 +116,7 @@
 
 @media(max-width: 50em) {
   .hero.container {
+    gap: 3rem;
     flex-direction: column-reverse;
   }
 }
@@ -132,12 +133,12 @@
   max-width: 70em;
   margin-inline: auto;
   margin-top: 4rem;
-  gap: min(6vw, 7rem);
+  gap: min(15vw, 7rem);
   justify-items: end;
-  align-items: start;
+  align-items: center;
 }
 
-.feature-tab-img {
+.tab-item-img {
   object-fit: contain;
   aspect-ratio: 10/7;
   align-self: start;
@@ -154,30 +155,30 @@
   }
 }
 
-.feature-tab {
+.tab-item {
   cursor: pointer;
   padding-block: 1.5em;
   border-bottom: 1px solid hsl(var(--clr-neutral-400) / .4);
 }
 
-.feature-tab {
+.tab-item {
   transition: .15s ease;
   color: hsl(var(--clr-neutral-400));
 }
 
-.feature-tab:hover {
+.tab-item:hover {
   color: hsl(var(--clr-accent-danger));
 }
 
-.feature-tab.selected {
+.tab-item.selected {
   color: hsl(var(--clr-primary-900));
 }
 
-.feature-tab-text {
+.tab-item-text {
   position: relative;
 }
 
-.feature-tab-text .underline {
+.tab-item-text .underline {
   position: absolute;
   width: 100%;
   bottom: -1.7em;
@@ -187,6 +188,10 @@
   border-radius: .1rem;
 }
 
+.tab-text p {
+  max-width: 400px;
+}
+
 @media(max-width: 50em) {
   .tab-text {
     display: flex;
@@ -194,20 +199,19 @@
     justify-content: center;
     align-items: center;
   }
-
 }
 
 @media(min-width: 40em) {
-  .feature-tab-text {
+  .tab-item-text {
     position: static;
   }
 
-  .feature-tab-text .underline {
+  .tab-item-text .underline {
     width: 220px;
     bottom: 0;
   }
 
-  .feature-tab {
+  .tab-item {
     border: 0;
     position: relative;
   }
@@ -221,16 +225,19 @@
 }
 
 .cards {
+  max-width: 850px;
+  margin-inline: auto;
   margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: min(7vw, 2rem);
+  gap: min(7vw, 1.8rem);
 }
 
-@media(min-width: 45em) {
+@media(min-width: 58em) {
   .cards {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 255px);
     align-items: start;
   }
 
@@ -385,4 +392,39 @@
 
 .socials-link:hover path {
   fill: hsl(var(--clr-accent-danger));
+}
+
+.img-bg {
+  position: relative;
+}
+
+.img-bg::before {
+  content: '';
+  position: absolute;
+  background-color: hsl(var(--clr-accent-primary));
+  z-index: -1;
+}
+
+.img-bg-right::before {
+  height: 79%;
+  inset: 25% -100vmax 0 20%;
+  border-radius: 0 0 0 5rem;
+}
+
+.img-bg-left::before {
+  height: 90%;
+  inset: 25% 25% 0 -100vmax;
+  border-radius: 0 9rem 5rem 0;
+}
+
+@media(min-width: 50em) {
+  .img-bg-left::before {
+    height: 90%;
+  }
+
+  .img-bg-right::before {
+    inset: 25% -100vmax 0 20%;
+    border-radius: 0 0 0 8rem;
+    height: 75%;
+  }
 }

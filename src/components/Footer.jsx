@@ -10,13 +10,13 @@ function Footer() {
                 <Logo className="mobile-text-center" />
                 <nav className="footer-nav">
                     <ul className="footer-nav-list mobile-text-center">
-                        <li className="nav-item">
+                        <li className="footer-nav-item">
                             <a className="fs-400 uppercase text-white nav-link" href="#">
                                 Features</a></li>
-                        <li className="nav-item">
+                        <li className="footer-nav-item">
                             <a className="fs-400 uppercase text-white nav-link" href="#">
                                 Pricing</a></li>
-                        <li className="nav-item">
+                        <li className="footer-nav-item">
                             <a className="fs-400 uppercase text-white nav-link" href="#">
                                 Contact</a></li>
                     </ul>

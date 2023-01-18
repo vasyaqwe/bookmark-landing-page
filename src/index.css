@@ -64,6 +64,11 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+body,
+#root {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration-skip-ink: auto;
   text-decoration: none;
@@ -238,6 +243,13 @@ input[type=number] {
 .even-cols {
   display: flex;
   flex-direction: column;
+}
+
+@media(max-width: 50em) {
+  .even-cols .mobile-center {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media(min-width: 50em) {
